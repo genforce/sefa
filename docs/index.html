@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>SeFa</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <a href="https://genforce.github.io/" target="_blank"><img src="./assets/genforce.png"></a>
+    </div>
+    <div class="title", style="padding-top: 10pt;">
+      Closed-Form Factorization of <br> Latent Semantics in GANs
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="http://shenyujun.github.io" target="_blank">Yujun Shen</a>,&nbsp;
+    <a href="http://bzhou.ie.cuhk.edu.hk" target="_blank">Bolei Zhou</a>
+  </div>
+  <div class="institution">
+    The Chinese University of Hong Kong
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/pdf/2007.06600.pdf" target="_blank">[Paper]</a>&nbsp;
+    <a href="https://github.com/genforce/sefa" target="_blank">[Code]</a>
+  </div>
+  <div class="teaser">
+    <a href="#demo"><img src="assets/teaser.gif" style="width: 70%;"></a>
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    In this work, we propose a <i>closed-form</i> algorithm, called <b>SeFa</b>,
+    for <i>unsupervised</i> latent Semantics Factorization in GANs.
+    More concretely, we investigate the very first fully-connected layer used in the GAN generator.
+    We argue that this layer actually filters out some negligible directions in the latent space and
+    highlights the directions that are critical for image synthesis.
+    By finding these important directions, we are able to identify versatile semantics
+    across various types of GAN models with an extremely fast implementation (<i>i.e.</i>, less than 1 second).
+
+    <p style="margin-top: 20pt"></p>
+    <img src="./assets/teaser.jpg" width="100%"></img>
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Fun Animations</div>
+  <div class="body">
+    The following animations are created by manipulating the versatile semantics <i>unsupervisedly</i> found by <b>SeFa</b> from GAN models trained on various datasets.
+
+    <p style="margin-top: 10pt; text-align:center; font-size:25px; font-weight:bold">Anime Faces<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><b>Pose</b></td>
+        <td><b>Mouth</b></td>
+        <td><b>Eye</b></td>
+      </tr>
+      <tr>
+        <td><img src="./assets/stylegan_animeface_pose.gif" width="90%"></img></td>
+        <td><img src="./assets/stylegan_animeface_mouth.gif" width="90%"></img></td>
+        <td><img src="./assets/stylegan_animeface_eye.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:25px; font-weight:bold">Cats<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><b>Posture (Left & Right)</b></td>
+        <td><b>Posture (Up & Down)</b></td>
+        <td><b>Zoom</b></td>
+      </tr>
+      <tr>
+        <td><img src="./assets/stylegan_cat_posture_horizontal.gif" width="90%"></img></td>
+        <td><img src="./assets/stylegan_cat_posture_vertical.gif" width="90%"></img></td>
+        <td><img src="./assets/stylegan_cat_zoom.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:25px; font-weight:bold">Cars<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><b>Orientation</b></td>
+        <td><b>Vertical Position</b></td>
+        <td><b>Shape</b></td>
+      </tr>
+      <tr>
+        <td><img src="./assets/stylegan_car_orientation.gif" width="90%"></img></td>
+        <td><img src="./assets/stylegan_car_vertical_position.gif" width="90%"></img></td>
+        <td><img src="./assets/stylegan_car_shape.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 20pt"><a name="demo"></a></p>
+    Below shows the full demo video of our manipulation interface using <b>SeFa</b>.
+
+    <!-- Adjust the frame size based on the demo (EVERY project differs). -->
+    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">
+      <iframe src="https://www.youtube.com/embed/OFHW2WbXXIQ" frameborder=0
+              style="position: absolute; top: 1%; left: 5%; width: 90%; height: 100%;"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{shen2020closedform,
+  title   = {Closed-Form Factorization of Latent Semantics in GANs},
+  author  = {Shen, Yujun and Zhou, Bolei},
+  journal = {arXiv preprint arXiv:2007.06600},
+  year    = {2020}
+}
+</pre>
+
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="./assets/interfacegan.jpg"></div>
+    <div class="comment">
+      <a href="https://genforce.github.io/interfacegan/" target="_blank">
+        Y. Shen, J. Gu, X. Tang, B. Zhou.
+        Interpreting the Latent Space of GANs for Semantic Face Editing.
+        CVPR 2020.</a><br>
+      <b>Comment:</b>
+      Interprets the face semantics emerging in the latent space of GANs with the help of off-the-shelf classifiers.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/ganalyze.jpg"></div>
+    <div class="comment">
+      <a href="http://ganalyze.csail.mit.edu/" target="_blank">
+        L. Goetschalckx, A. Andonian, A. Oliva, P. Isola.
+        GANalyze: Toward Visual Definitions of Cognitive Image Properties.
+        ICCV 2019.</a><br>
+      <b>Comment:</b>
+      Controls the latent space of GANs to increase the memorability of synthesized images.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/steerability.jpg"></div>
+    <div class="comment">
+      <a href="https://ali-design.github.io/gan_steerability/" target="_blank">
+        A. Jahanian, L. Chai, P. Isola.
+        On the "Steerability" of Generative Adversarial Networks.
+        ICLR 2020.</a><br>
+      <b>Comment:</b>
+      Shifts the data distribution by steering the latent code to fit camera movements and color changes.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/higan.jpg"></div>
+    <div class="comment">
+      <a href="https://genforce.github.io/higan/" target="_blank">
+        C. Yang, Y. Shen, B. Zhou.
+        Semantic Hierarchy Emerges in Deep Generative Representations for Scene Synthesis.
+        arXiv preprint arXiv:1911.09267.</a><br>
+      <b>Comment:</b>
+      Explores the emergent semantic hierarchy in scene synthesis models.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/gan_latent_discovery.jpg"></div>
+    <div class="comment">
+      <a href="https://github.com/anvoynov/GanLatentDiscovery" target="_blank">
+        A. Voynov and A. Babenko.
+        Unsupervised Discovery of Interpretable Directions in the GAN Latent Space.
+        ICML 2020.</a><br>
+      <b>Comment:</b>
+      Interprets meaningful directions in GAN latent space by unsupervisedly training a direction reconstructor.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/ganspace.jpg"></div>
+    <div class="comment">
+      <a href="https://github.com/harskish/ganspace" target="_blank">
+        E. Härkönen, A. Hertzmann, J. Lehtinen, S. Paris.
+        GANSpace: Discovering Interpretable GAN Controls.
+        arXiv preprint arXiv:2004.02546.</a><br>
+      <b>Comment:</b>
+      Unsupervisedly discovers the latent semantics learned by GANs using PCA.
+    </div>
+  </div>
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>
