@@ -30,6 +30,38 @@ In this repository, we propose a *closed-form* approach, termed as **SeFa**, for
 | Orientation | Vertical Position | Shape
 | ![image](./docs/assets/stylegan_car_orientation.gif) | ![image](./docs/assets/stylegan_car_vertical_position.gif) | ![image](./docs/assets/stylegan_car_shape.gif)
 
+## Semantic Discovery
+
+It is very simple to interpret a particular model with
+
+```bash
+MODEL_NAME=stylegan_animeface512
+LAYER_IDX=0-1
+NUM_SAMPLES=5
+NUM_SEMANTICS=5
+python sefa.py ${MODEL_NAME} \
+    -L ${LAYER_IDX} \
+    -N ${NUM_SAMPLES} \
+    -K ${NUM_SEMANTICS}
+```
+
+After the program finishes, there will be two visualization pages in the directory `results`.
+
+**NOTE:** The pre-trained models are borrowed from the [genforce](https://github.com/genforce/genforce) repository.
+
+## Interface
+
+We also provide an interface for interactive editing based on [StreamLit](https://www.streamlit.io/). This interface can be locally launched with
+
+```bash
+pip install streamlit
+CUDA_VISIBLE_DEVICES=0 streamlit run interface.py
+```
+
+After the interface is launched, users can play with it via a browser.
+
+**NOTE:** We have prepared some latent codes in the directory `latent_codes` to ensure the synthesis quality, which is completely determined by the pre-trained generator. Users can simply skip these prepared codes by clicking the `Random` button.
+
 ## BibTeX
 
 ```bibtex
@@ -40,5 +72,3 @@ In this repository, we propose a *closed-form* approach, termed as **SeFa**, for
   year    = {2020}
 }
 ```
-
-## Code Coming Soon
