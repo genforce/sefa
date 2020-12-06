@@ -10,6 +10,7 @@
 [[Paper](https://arxiv.org/pdf/2007.06600.pdf)]
 [[Project Page](https://genforce.github.io/sefa/)]
 [[Demo](https://www.youtube.com/watch?v=OFHW2WbXXIQ)]
+[[Colab](https://colab.research.google.com/github/genforce/sefa/blob/master/docs/SeFa.ipynb)]
 
 In this repository, we propose a *closed-form* approach, termed as **SeFa**, for *unsupervised* latent semantic factorization in GANs. With this algorithm, we are able to discover versatile semantics from different GAN models trained on various datasets. Most importantly, the proposed method does *not* rely on pre-trained semantic predictors and has an extremely *fast* implementation (*i.e.*, less than 1 second to interpret a model). Below show some interesting results on anime faces, cats, and cars.
 
