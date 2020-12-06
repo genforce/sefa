@@ -63,7 +63,7 @@ def main():
 
     model_name = st.sidebar.selectbox(
         'Model to Interpret',
-        ['stylegan_animeface512', 'stylegan_car512', 'stylegan_cat512',
+        ['stylegan_animeface512', 'stylegan_car512', 'stylegan_cat256',
          'pggan_celebahq1024'])
 
     model = get_model(model_name)
