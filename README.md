@@ -5,7 +5,7 @@
 
 > **Closed-Form Factorization of Latent Semantics in GANs** <br>
 > Yujun Shen, Bolei Zhou <br>
-> *arXiv preprint arXiv:2007.06600*
+> *Computer Vision and Pattern Recognition (CVPR), 2021 (**Oral**)*
 
 [[Paper](https://arxiv.org/pdf/2007.06600.pdf)]
 [[Project Page](https://genforce.github.io/sefa/)]
@@ -66,10 +66,10 @@ After the interface is launched, users can play with it via a browser.
 ## BibTeX
 
 ```bibtex
-@article{shen2020closedform,
-  title   = {Closed-Form Factorization of Latent Semantics in GANs},
-  author  = {Shen, Yujun and Zhou, Bolei},
-  journal = {arXiv preprint arXiv:2007.06600},
-  year    = {2020}
+@inproceedings{shen2021closedform,
+  title     = {Closed-Form Factorization of Latent Semantics in GANs},
+  author    = {Shen, Yujun and Zhou, Bolei},
+  booktitle = {CVPR},
+  year      = {2021}
 }
 ```
