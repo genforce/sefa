@@ -27,3 +27,55 @@ events.*
 *.pkl
 *.h5
 *.dat
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+.nox/
+*.log
+
+# Claude
+.claude/*
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Poetry
+dist/
+# Note: Don't ignore poetry.lock - it should be committed
+
+# Build artifacts
+build/
+develop-eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
